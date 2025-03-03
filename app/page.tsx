@@ -1,12 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaHandHoldingHeart, FaUsers, FaPaw, FaTree, FaArrowRight, FaRegLightbulb, FaRegCheckCircle } from 'react-icons/fa';
+import { FaHandHoldingHeart, FaUsers, FaPaw, FaTree, FaArrowRight, FaRegLightbulb, FaRegCheckCircle, FaSearch, FaUserFriends } from 'react-icons/fa';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MainImage from '@/public/images/main-image.jpeg';
 
 export default function HomePage() {
   return (
@@ -73,7 +74,7 @@ export default function HomePage() {
               >
                 <div className="relative h-80 md:h-96 w-full rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="/images/main-image.jpeg"
+                    src={MainImage}
                     alt="Благотворительность"
                     fill
                     className="object-cover"

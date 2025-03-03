@@ -18,6 +18,7 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: true,
   },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/the-quiet-makers' : '',
 };
 
 module.exports = nextConfig; 
