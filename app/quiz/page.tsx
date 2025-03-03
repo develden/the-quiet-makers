@@ -27,44 +27,43 @@ const quizQuestions: QuizQuestionType[] = [
     id: 'category',
     question: 'В какой сфере вы хотите оказать помощь?',
     options: [
-      { id: 'people', text: 'Люди: поддержка социально уязвимых групп', icon: <FaUsers className="text-blue-500" />, value: 'people' },
-      { id: 'animals', text: 'Животные: защита и уход за бездомными или редкими видами', icon: <FaPaw className="text-amber-500" />, value: 'animals' },
-      { id: 'nature', text: 'Природа: сохранение экосистем и борьба с загрязнением', icon: <FaLeaf className="text-green-500" />, value: 'nature' }
+      { id: 'people', text: 'Люди: поддержка социально уязвимых групп.', icon: <FaUsers className="text-blue-500" />, value: 'people' },
+      { id: 'animals', text: 'Животные: защита и уход за бездомными или редкими видами.', icon: <FaPaw className="text-amber-500" />, value: 'animals' },
+      { id: 'nature', text: 'Природа: сохранение экосистем и борьба с загрязнением.', icon: <FaLeaf className="text-green-500" />, value: 'nature' }
     ]
   },
   {
     id: 'goal',
     question: 'Какая цель для вас наиболее приоритетна?',
     options: [
-      { id: 'education', text: 'Улучшение условий жизни и образования', icon: <FaRegLightbulb className="text-yellow-500" />, value: 'education' },
-      { id: 'health', text: 'Решение вопросов здоровья и безопасности', icon: <FaHeartbeat className="text-pink-500" />, value: 'health' },
-      { id: 'environment', text: 'Восстановление и защита окружающей среды', icon: <FaLeaf className="text-green-500" />, value: 'environment' }
+      { id: 'education', text: 'Улучшение условий жизни и образования.', icon: <FaRegLightbulb className="text-yellow-500" />, value: 'education' },
+      { id: 'health', text: 'Решение вопросов здоровья и безопасности.', icon: <FaHeartbeat className="text-pink-500" />, value: 'health' },
+      { id: 'environment', text: 'Восстановление и защита окружающей среды.', icon: <FaLeaf className="text-green-500" />, value: 'environment' }
     ]
   },
   {
     id: 'format',
     question: 'Какой формат поддержки вам удобнее?',
     options: [
-      { id: 'one-time', text: 'Разовая финансовая помощь', icon: <FaMoneyBillWave className="text-green-500" />, value: 'one-time' },
-      { id: 'recurring', text: 'Регулярная поддержка выбранного проекта', icon: <FaRegClock className="text-blue-500" />, value: 'recurring' },
-      { id: 'volunteer', text: 'Волонтёрство', icon: <FaHandHoldingHeart className="text-purple-500" />, value: 'volunteer' }
+      { id: 'one-time', text: 'Разовая финансовая помощь.', icon: <FaMoneyBillWave className="text-green-500" />, value: 'one-time' },
+      { id: 'recurring', text: 'Регулярная поддержка выбранного проекта.', icon: <FaRegClock className="text-blue-500" />, value: 'recurring' }
     ]
   },
   {
     id: 'result',
     question: 'Какой результат вы хотите видеть от своего вклада?',
     options: [
-      { id: 'concrete', text: 'Конкретные и измеримые результаты', icon: <FaRegLightbulb className="text-yellow-500" />, value: 'concrete' },
-      { id: 'general', text: 'Общий вклад в улучшение выбранной сферы', icon: <FaHandHoldingHeart className="text-purple-500" />, value: 'general' }
+      { id: 'concrete', text: 'Конкретные и измеримые результаты.', icon: <FaRegLightbulb className="text-yellow-500" />, value: 'concrete' },
+      { id: 'general', text: 'Общий вклад в улучшение выбранной сферы.', icon: <FaHandHoldingHeart className="text-purple-500" />, value: 'general' }
     ]
   },
   {
     id: 'project_type',
     question: 'Какие проекты вы считаете наиболее важными?',
     options: [
-      { id: 'animal_help', text: 'Помощь животным: вакцинация, уход, приюты', icon: <FaPaw className="text-amber-500" />, value: 'animal_help' },
-      { id: 'education_support', text: 'Поддержка образования: строительство школ, доступ к обучению', icon: <FaRegLightbulb className="text-blue-500" />, value: 'education_support' },
-      { id: 'eco_initiatives', text: 'Экологические инициативы: очистка территорий, посадка деревьев', icon: <FaLeaf className="text-green-500" />, value: 'eco_initiatives' }
+      { id: 'animal_help', text: 'Помощь животным: вакцинация, уход, приюты.', icon: <FaPaw className="text-amber-500" />, value: 'animal_help' },
+      { id: 'education_support', text: 'Поддержка образования: строительство школ, доступ к обучению.', icon: <FaRegLightbulb className="text-blue-500" />, value: 'education_support' },
+      { id: 'eco_initiatives', text: 'Экологические инициативы: очистка территорий, посадка деревьев.', icon: <FaLeaf className="text-green-500" />, value: 'eco_initiatives' }
     ]
   }
 ];
@@ -159,7 +158,7 @@ export default function QuizPage() {
               Найди проект, который тебя вдохновит
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ответь на несколько вопросов, и мы подберём для тебя проекты, которые важны именно тебе
+              Ответь на несколько вопросов, и мы подберём для тебя проекты, которые важны именно тебе.
             </p>
           </div>
           

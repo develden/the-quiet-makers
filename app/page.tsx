@@ -31,19 +31,16 @@ export default function HomePage() {
                 transition={{ duration: 0.6 }}
               >
                 <div className="mb-6">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center">
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
-                      Благотворительность,
+                      Делать добро просто. Найди проект, который вдохновит тебя на помощь.
                     </span>
                   </h1>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mt-2 mobile-text-balance">
-                    которая соответствует вашим ценностям
-                  </h2>
                 </div>
-                <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-xl leading-relaxed mobile-text-balance">
-                  The Quiet Makers помогает вам находить и поддерживать проекты, которые действительно важны для вас. Мы соединяем добрые сердца с теми, кто нуждается в помощи.
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-xl leading-relaxed mobile-text-balance text-center mx-auto">
+                  The Quiet Makers — это место, где каждый может найти своё счастье в добрых делах. Мы объединяем людей и проекты, делая помощь прозрачной и вдохновляющей.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -52,7 +49,7 @@ export default function HomePage() {
                       href="/quiz" 
                       className="w-full sm:w-auto inline-block py-3 sm:py-4 px-6 sm:px-8 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all text-center"
                     >
-                      Пройти тест
+                      Найти свой проект
                     </Link>
                   </motion.div>
                   <motion.div
@@ -60,10 +57,10 @@ export default function HomePage() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link 
-                      href="/projects" 
+                      href="/about" 
                       className="w-full sm:w-auto inline-block py-3 sm:py-4 px-6 sm:px-8 bg-white text-gray-700 font-bold rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm hover:shadow transition-all text-center"
                     >
-                      Смотреть проекты
+                      Узнать больше о платформе
                     </Link>
                   </motion.div>
                 </div>

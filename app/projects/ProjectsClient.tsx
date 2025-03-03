@@ -112,7 +112,7 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
           {/* Заголовок страницы */}
           <div className="mb-10 sm:mb-16 text-center">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600 mb-3 sm:mb-4 mobile-text-balance">
-              Проекты, которые соответствуют вашим интересам
+              Проекты, которые соответствуют вашим интересам и готовы к поддержке.
             </h1>
             
             {fromQuiz && (
@@ -299,7 +299,7 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                       href={`/project-details/${project.id}`}
                       className="block w-full py-2.5 sm:py-3 px-4 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white rounded-lg text-center font-medium transition-all shadow-sm hover:shadow text-sm sm:text-base"
                     >
-                      Подробнее
+                      Выбрать проект
                     </Link>
                   </div>
                 </motion.div>

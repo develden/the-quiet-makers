@@ -3,7 +3,7 @@
 import React, { useState, FormEvent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaArrowLeft, FaUsers, FaHandHoldingHeart, FaPaw, FaTree } from 'react-icons/fa';
+import { FaArrowLeft, FaUsers, FaHandHoldingHeart, FaPaw, FaTree, FaShare, FaCheckCircle, FaExternalLinkAlt } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Project, Story } from '@/lib/api';
@@ -54,7 +54,7 @@ export default function ProjectDetailsClient({ project }: { project: Project }) 
       setDonationAmount(0);
       setCustomAmount(0);
       setIsRecurring(false);
-    }, 3000);
+    }, 10000);
   };
   
   return (
@@ -232,6 +232,73 @@ export default function ProjectDetailsClient({ project }: { project: Project }) 
           )}
         </div>
       </main>
+      
+      {/* Модальное окно подтверждения транзакции */}
+      {showSuccess && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 md:p-8">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                <FaCheckCircle className="text-green-600 text-3xl" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Спасибо за ваш вклад!</h2>
+              <p className="text-gray-600">Ваше пожертвование помогает менять жизни к лучшему.</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg p-4 mb-6">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-gray-600">Сумма:</span>
+                <span className="font-bold text-gray-800">{(donationAmount || customAmount).toLocaleString()} ₽</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-600">Проект:</span>
+                <span className="font-bold text-gray-800">{project.title}</span>
+              </div>
+            </div>
+            
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Отслеживание транзакции</h3>
+              <a 
+                href="#" 
+                className="flex items-center text-primary-600 hover:text-primary-700"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Посмотреть детали в блокчейне</span>
+                <FaExternalLinkAlt className="ml-2 text-sm" />
+              </a>
+            </div>
+            
+            <div className="space-y-3">
+              <button 
+                onClick={() => setShowSuccess(false)}
+                className="w-full py-3 px-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
+              >
+                Вернуться к проекту
+              </button>
+              
+              {!isRecurring && (
+                <button 
+                  onClick={() => {
+                    setIsRecurring(true);
+                    setShowSuccess(false);
+                  }}
+                  className="w-full py-3 px-4 bg-white border border-primary-600 text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
+                >
+                  Подписаться на регулярные пожертвования
+                </button>
+              )}
+              
+              <button 
+                className="w-full py-3 px-4 bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors flex items-center justify-center"
+              >
+                <FaShare className="mr-2" />
+                Поделиться проектом
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       
       <Footer />
     </>
