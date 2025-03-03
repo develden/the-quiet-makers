@@ -16,7 +16,7 @@ export default function HomePage() {
       
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 md:py-32 overflow-hidden">
+        <section className="relative bg-gradient-to-b from-gray-50 to-white pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 md:pb-32 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-100 rounded-full opacity-30 blur-3xl"></div>
             <div className="absolute top-60 -left-20 w-72 h-72 bg-secondary-100 rounded-full opacity-30 blur-3xl"></div>
@@ -30,14 +30,16 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
-                    Благотворительность,
-                  </span>
-                  <span className="block mt-2 mobile-text-balance">
+                <div className="mb-6">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600">
+                      Благотворительность,
+                    </span>
+                  </h1>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mt-2 mobile-text-balance">
                     которая соответствует вашим ценностям
-                  </span>
-                </h1>
+                  </h2>
+                </div>
                 <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-xl leading-relaxed mobile-text-balance">
                   The Quiet Makers помогает вам находить и поддерживать проекты, которые действительно важны для вас. Мы соединяем добрые сердца с теми, кто нуждается в помощи.
                 </p>

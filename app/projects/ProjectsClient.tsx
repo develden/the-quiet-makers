@@ -107,16 +107,16 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
     <>
       <Header />
       
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-20">
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 md:pb-32">
         <div className="max-w-6xl mx-auto px-4">
           {/* Заголовок страницы */}
-          <div className="mb-16 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600 mb-4">
+          <div className="mb-10 sm:mb-16 text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600 mb-3 sm:mb-4 mobile-text-balance">
               Проекты, которые соответствуют вашим интересам
             </h1>
             
             {fromQuiz && (
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mobile-text-balance">
                 Мы подобрали проекты на основе ваших предпочтений
                 {categories.length > 0 && (
                   <>
@@ -136,21 +136,21 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
           
           {/* Поиск и фильтры */}
           <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <div className="relative flex-grow">
                 <input
                   type="text"
                   placeholder="Поиск проектов..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full py-4 px-5 pl-12 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring focus:ring-primary-200 focus:ring-opacity-50 shadow-sm transition-all"
+                  className="w-full py-3 sm:py-4 px-5 pl-12 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring focus:ring-primary-200 focus:ring-opacity-50 shadow-sm transition-all"
                 />
                 <FaSearch className="absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400" />
               </div>
               
               <motion.button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center justify-center py-4 px-6 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all"
+                className="flex items-center justify-center py-3 sm:py-4 px-6 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -162,14 +162,14 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
             {/* Панель фильтров */}
             {showFilters && (
               <motion.div 
-                className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8"
+                className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 sm:p-6 mb-8"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-xl font-bold text-gray-800">Фильтры</h3>
+                <div className="flex justify-between items-center mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800">Фильтры</h3>
                   <button
                     onClick={() => setShowFilters(false)}
                     className="text-gray-400 hover:text-gray-600 p-2 rounded-full hover:bg-gray-100 transition-colors"
@@ -180,12 +180,12 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                 
                 <div className="mb-4">
                   <h4 className="font-medium text-gray-700 mb-3">Категории</h4>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {['Люди', 'Животные', 'Природа', 'Дети', 'Экология'].map((tag) => (
                       <motion.button
                         key={tag}
                         onClick={() => handleTagSelect(tag)}
-                        className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium border-2 transition-all ${
+                        className={`inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium border-2 transition-all ${
                           selectedTags.includes(tag)
                             ? `${tagStyles[tag]?.color || 'bg-primary-50 text-primary-700 border-primary-200'} shadow-sm`
                             : 'bg-white text-gray-700 border-gray-200 hover:border-gray-300'
@@ -204,13 +204,13 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
             
             {/* Выбранные фильтры */}
             {selectedTags.length > 0 && (
-              <div className="flex flex-wrap gap-3 mb-8 items-center">
-                <span className="text-sm text-gray-500">Выбранные фильтры:</span>
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8 items-center">
+                <span className="text-xs sm:text-sm text-gray-500">Выбранные фильтры:</span>
                 {selectedTags.map(tag => (
                   <motion.button
                     key={tag}
                     onClick={() => handleTagSelect(tag)}
-                    className={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium ${tagStyles[tag]?.color || 'bg-primary-50 text-primary-700'}`}
+                    className={`inline-flex items-center px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium ${tagStyles[tag]?.color || 'bg-primary-50 text-primary-700'}`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -221,7 +221,7 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                 ))}
                 <motion.button
                   onClick={() => setSelectedTags([])}
-                  className="text-sm text-gray-500 hover:text-gray-700 py-1 px-2 hover:bg-gray-100 rounded-md transition-colors"
+                  className="text-xs sm:text-sm text-gray-500 hover:text-gray-700 py-1 px-2 hover:bg-gray-100 rounded-md transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -233,7 +233,7 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
           
           {/* Список проектов */}
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filteredProjects.map((project) => (
                 <motion.div
                   key={project.id}
@@ -244,7 +244,7 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                   whileHover={{ y: -5 }}
                 >
                   <Link href={`/project-details/${project.id}`} className="block">
-                    <div className="relative h-52 overflow-hidden">
+                    <div className="relative h-48 sm:h-52 overflow-hidden">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -255,12 +255,12 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                     </div>
                   </Link>
                   
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-2 mb-4 -mt-10 relative z-10">
+                  <div className="p-4 sm:p-6">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4 -mt-8 sm:-mt-10 relative z-10">
                       {project.tags.slice(0, 3).map((tag, index) => (
                         <span
                           key={index}
-                          className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${tagStyles[tag]?.color || 'bg-gray-50 text-gray-700 border-gray-100'}`}
+                          className={`inline-flex items-center px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs font-medium ${tagStyles[tag]?.color || 'bg-gray-50 text-gray-700 border-gray-100'}`}
                         >
                           {tagStyles[tag]?.icon}
                           {tag}
@@ -269,17 +269,17 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                     </div>
                     
                     <Link href={`/project-details/${project.id}`} className="block group">
-                      <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
                         {project.title}
                       </h3>
                     </Link>
                     
-                    <p className="text-gray-600 mb-5 line-clamp-3 text-sm">
+                    <p className="text-gray-600 mb-4 sm:mb-5 line-clamp-3 text-xs sm:text-sm">
                       {project.description}
                     </p>
                     
-                    <div className="mb-5">
-                      <div className="flex justify-between text-sm mb-2">
+                    <div className="mb-4 sm:mb-5">
+                      <div className="flex justify-between text-xs sm:text-sm mb-2">
                         <span className="text-gray-500">Собрано</span>
                         <span className="font-medium">{project.collected.toLocaleString()} ₽</span>
                       </div>
@@ -289,7 +289,7 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                           style={{ width: `${Math.min(100, (project.collected / project.goal) * 100)}%` }}
                         ></div>
                       </div>
-                      <div className="flex justify-between text-sm mt-2">
+                      <div className="flex justify-between text-xs sm:text-sm mt-2">
                         <span className="text-gray-500">Цель: {project.goal.toLocaleString()} ₽</span>
                         <span className="font-medium text-primary-600">{Math.round((project.collected / project.goal) * 100)}%</span>
                       </div>
@@ -297,9 +297,9 @@ export default function ProjectsClient({ initialProjects }: { initialProjects: P
                     
                     <Link
                       href={`/project-details/${project.id}`}
-                      className="block w-full py-3 px-4 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white rounded-lg text-center font-medium transition-all shadow-sm hover:shadow"
+                      className="block w-full py-2.5 sm:py-3 px-4 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white rounded-lg text-center font-medium transition-all shadow-sm hover:shadow text-sm sm:text-base"
                     >
-                      Поддержать проект
+                      Подробнее
                     </Link>
                   </div>
                 </motion.div>
