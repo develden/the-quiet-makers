@@ -283,10 +283,51 @@ body {
 /* Медиа-запросы */
 @media (max-width: 768px) {
   .section-title {
-    @apply text-xl;
+    @apply text-2xl;
   }
   
   .section-subtitle {
+    @apply text-base;
+  }
+
+  /* Улучшение адаптивности для мобильных устройств */
+  h1 {
+    @apply text-3xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-2xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl leading-tight;
+  }
+  
+  .container {
+    @apply px-4;
+  }
+  
+  /* Улучшение отображения текста на мобильных устройствах */
+  .mobile-text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Дополнительные медиа-запросы для очень маленьких экранов */
+@media (max-width: 375px) {
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+  
+  h3 {
     @apply text-lg;
+  }
+  
+  p {
+    @apply text-sm;
   }
 } 

@@ -16,24 +16,25 @@ export default function Footer() {
       
       {/* Верхняя часть футера с CTA */}
       <div className="relative z-10 border-b border-gray-200">
-        <div className="container mx-auto px-4 py-16">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="container mx-auto px-4 py-12 sm:py-16">
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 md:p-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3 sm:mb-4 mobile-text-balance">
                   Готовы начать помогать?
                 </h2>
-                <p className="text-gray-600 mb-0 md:pr-8">
+                <p className="text-sm sm:text-base text-gray-600 mb-0 md:pr-8 mobile-text-balance">
                   Пройдите короткий тест и найдите проекты, которые соответствуют вашим ценностям и интересам.
                 </p>
               </div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="w-full md:w-auto"
               >
                 <Link 
                   href="/quiz" 
-                  className="inline-flex items-center py-4 px-8 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold rounded-xl shadow-sm hover:shadow transition-all whitespace-nowrap"
+                  className="inline-flex items-center justify-center w-full md:w-auto py-3 sm:py-4 px-6 sm:px-8 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold rounded-xl shadow-sm hover:shadow transition-all whitespace-nowrap"
                 >
                   Пройти тест
                   <FaArrowRight className="ml-2" />
@@ -45,20 +46,20 @@ export default function Footer() {
       </div>
       
       {/* Основная часть футера */}
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="flex items-center group mb-6">
-              <div className="relative w-10 h-10 mr-3 overflow-hidden">
+      <div className="container mx-auto px-4 py-12 sm:py-16 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+            <Link href="/" className="flex items-center group mb-4 sm:mb-6">
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 mr-2 sm:mr-3 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl"></div>
                 <div className="absolute inset-[3px] bg-white rounded-lg"></div>
                 <div className="absolute inset-[6px] bg-gradient-to-br from-primary-500 to-secondary-500 rounded-md"></div>
               </div>
-              <span className="font-bold text-xl tracking-tight text-gray-800">
+              <span className="font-bold text-lg sm:text-xl tracking-tight text-gray-800">
                 The Quiet Makers
               </span>
             </Link>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed mobile-text-balance">
               Платформа, которая помогает людям находить благотворительные проекты, 
               соответствующие их ценностям и интересам.
             </p>
@@ -180,11 +181,11 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+        <div className="border-t border-gray-200 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-500 text-xs sm:text-sm mb-4 md:mb-0 text-center md:text-left">
             &copy; {currentYear} The Quiet Makers. Все права защищены.
           </p>
-          <p className="text-gray-500 text-sm flex items-center">
+          <p className="text-gray-500 text-xs sm:text-sm flex items-center">
             Сделано с <FaHeart className="text-primary-500 mx-1" /> для лучшего мира
           </p>
         </div>
