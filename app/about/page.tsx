@@ -15,7 +15,7 @@ export default function AboutPage() {
       
       <main className="overflow-hidden pt-20">
         {/* Hero секция */}
-        <section className="py-12 md:py-20 relative bg-gray-900 text-white">
+        <section className="py-12 md:py-20 relative bg-gray-900">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-10 md:mb-0">
@@ -25,9 +25,9 @@ export default function AboutPage() {
                   transition={{ duration: 0.5 }}
                 >
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                    Мы делаем благотворительность <span className="text-primary-400">доступной и прозрачной</span>
+                    Мы делаем благотворительность <span className="text-primary-300">доступной и прозрачной</span>
                   </h1>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-lg font-medium">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
                     Наша миссия — соединять людей с проверенными благотворительными проектами, которые им действительно близки.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -83,8 +83,8 @@ export default function AboutPage() {
                 <div className="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm">
                   <FaHandHoldingHeart className="text-primary-600 text-2xl" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4">Наша миссия</h3>
-                <p className="text-gray-800 text-base sm:text-lg font-medium">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-600 mb-4">Наша миссия</h3>
+                <p className="text-gray-700 text-base sm:text-lg">
                   Мы стремимся сделать благотворительность доступной и прозрачной для каждого. Наша платформа соединяет людей с проверенными проектами, которые соответствуют их ценностям и интересам. Мы верим, что технологии могут сделать помощь другим простой, безопасной и эффективной.
                 </p>
               </motion.div>
@@ -100,8 +100,8 @@ export default function AboutPage() {
                 <div className="bg-secondary-50 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm">
                   <FaLeaf className="text-secondary-600 text-2xl" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-700 mb-4">Наше видение</h3>
-                <p className="text-gray-800 text-base sm:text-lg font-medium">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-600 mb-4">Наше видение</h3>
+                <p className="text-gray-700 text-base sm:text-lg">
                   Мы видим мир, где каждый человек может легко найти и поддержать благотворительные проекты, которые резонируют с его личными ценностями. Мы стремимся создать экосистему, где благотворительность становится частью повседневной жизни, а каждое пожертвование имеет измеримое влияние.
                 </p>
               </motion.div>
@@ -115,8 +115,8 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-700 mb-6">Наши ценности</h2>
-                <p className="text-lg sm:text-xl text-gray-800 max-w-3xl mx-auto font-medium">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-600 mb-6">Наши ценности</h2>
+                <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
                   Принципы, которыми мы руководствуемся в нашей работе
                 </p>
               </motion.div>
@@ -133,8 +133,8 @@ export default function AboutPage() {
                   <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm">
                     <FaPaw className="text-primary-600 text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-700 mb-4">Доверие и прозрачность</h3>
-                  <p className="text-gray-800 text-base font-medium">
+                  <h3 className="text-xl font-bold text-gray-600 mb-4">Доверие и прозрачность</h3>
+                  <p className="text-gray-700 text-base">
                     Мы тщательно проверяем каждый проект и обеспечиваем полную прозрачность использования средств. Вы всегда знаете, куда идут ваши пожертвования и какое влияние они оказывают.
                   </p>
                 </motion.div>
@@ -150,8 +150,8 @@ export default function AboutPage() {
                   <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm">
                     <FaHandHoldingHeart className="text-secondary-600 text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-700 mb-4">Персонализация</h3>
-                  <p className="text-gray-800 text-base font-medium">
+                  <h3 className="text-xl font-bold text-gray-600 mb-4">Персонализация</h3>
+                  <p className="text-gray-700 text-base">
                     Мы верим, что благотворительность должна быть личной. Наша платформа помогает найти проекты, которые соответствуют вашим ценностям и интересам, делая опыт благотворительности более значимым.
                   </p>
                 </motion.div>
@@ -167,8 +167,8 @@ export default function AboutPage() {
                   <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm">
                     <FaChartLine className="text-amber-600 text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-700 mb-4">Технологии, которые работают на вас</h3>
-                  <p className="text-gray-800 text-base font-medium">
+                  <h3 className="text-xl font-bold text-gray-600 mb-4">Технологии, которые работают на вас</h3>
+                  <p className="text-gray-700 text-base">
                     Мы используем современные решения, чтобы сделать благотворительность удобной, безопасной и персонализированной. Платформа сама подберёт проекты, которые вам близки, и покажет их влияние.
                   </p>
                 </motion.div>
@@ -187,8 +187,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-700 mb-6">Как это работает</h2>
-              <p className="text-lg sm:text-xl text-gray-800 max-w-3xl mx-auto font-medium">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-600 mb-6">Как это работает</h2>
+              <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
                 Мы упростили процесс поиска и поддержки благотворительных проектов
               </p>
             </motion.div>
@@ -208,8 +208,8 @@ export default function AboutPage() {
                 <div className="bg-primary-50 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                   <FaRobot className="text-primary-600 text-2xl" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-700 mb-3">Оценка ваших интересов с помощью AI</h3>
-                <p className="text-gray-800 text-sm sm:text-base font-medium">
+                <h3 className="text-lg font-bold text-gray-600 mb-3">Оценка ваших интересов с помощью AI</h3>
+                <p className="text-gray-700 text-sm sm:text-base">
                   Интеллектуальный помощник анализирует ваши предпочтения через простые вопросы, определяя близкие вам направления.
                 </p>
               </motion.div>
@@ -228,8 +228,8 @@ export default function AboutPage() {
                 <div className="bg-blue-50 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                   <FaSearch className="text-blue-600 text-2xl" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-700 mb-3">Подбор проектов</h3>
-                <p className="text-gray-800 text-sm sm:text-base font-medium">
+                <h3 className="text-lg font-bold text-gray-600 mb-3">Подбор проектов</h3>
+                <p className="text-gray-700 text-sm sm:text-base">
                   После анализа интересов ассистент AI предоставляет вам список подходящих проверенных проектов.
                 </p>
               </motion.div>
@@ -248,8 +248,8 @@ export default function AboutPage() {
                 <div className="bg-green-50 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                   <FaShieldAlt className="text-green-600 text-2xl" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-700 mb-3">Прозрачность благодаря блокчейн</h3>
-                <p className="text-gray-800 text-sm sm:text-base font-medium">
+                <h3 className="text-lg font-bold text-gray-600 mb-3">Прозрачность благодаря блокчейн</h3>
+                <p className="text-gray-700 text-sm sm:text-base">
                   Каждое пожертвование фиксируется в блокчейне, что позволяет отслеживать использование средств.
                 </p>
               </motion.div>
@@ -268,8 +268,8 @@ export default function AboutPage() {
                 <div className="bg-purple-50 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                   <FaRegCreditCard className="text-purple-600 text-2xl" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-700 mb-3">Простое пожертвование</h3>
-                <p className="text-gray-800 text-sm sm:text-base font-medium">
+                <h3 className="text-lg font-bold text-gray-600 mb-3">Простое пожертвование</h3>
+                <p className="text-gray-700 text-sm sm:text-base">
                   Выберите проект и сделайте пожертвование всего за несколько кликов через удобную платёжную систему.
                 </p>
               </motion.div>
@@ -288,8 +288,8 @@ export default function AboutPage() {
                 <div className="bg-amber-50 rounded-full w-14 h-14 flex items-center justify-center mb-5">
                   <FaRegChartBar className="text-amber-600 text-2xl" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-700 mb-3">Измеримый результат</h3>
-                <p className="text-gray-800 text-sm sm:text-base font-medium">
+                <h3 className="text-lg font-bold text-gray-600 mb-3">Измеримый результат</h3>
+                <p className="text-gray-700 text-sm sm:text-base">
                   Мы показываем, как ваш вклад меняет жизни. Следите за прогрессом и будьте уверены в своём выборе.
                 </p>
               </motion.div>
@@ -317,7 +317,7 @@ export default function AboutPage() {
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
                     Узнайте, как легко вы можете помочь. Ответьте на несколько вопросов и выберите проект.
                   </h2>
-                  <p className="text-white text-base sm:text-lg mb-8 max-w-2xl font-medium">
+                  <p className="text-white text-base sm:text-lg mb-8 max-w-2xl">
                     Пройдите короткий тест и найдите проекты, которые вам действительно близки.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
