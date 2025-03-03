@@ -149,6 +149,14 @@ const mockProjects = [
   }
 ];
 
+// Эта функция необходима для статической генерации страниц при использовании output: 'export'
+export function generateStaticParams() {
+  // Возвращаем массив объектов с параметрами для каждой страницы
+  return mockProjects.map((project) => ({
+    id: project.id,
+  }));
+}
+
 export default function ProjectDetails({ params }: { params: { id: string } }) {
   const [donationAmount, setDonationAmount] = useState<number>(0);
   const [customAmount, setCustomAmount] = useState<number>(0);
