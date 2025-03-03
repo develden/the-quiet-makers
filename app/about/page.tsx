@@ -13,9 +13,9 @@ export default function AboutPage() {
     <>
       <Header />
       
-      <main className="overflow-hidden">
+      <main className="overflow-hidden pt-20">
         {/* Hero секция */}
-        <section className="py-12 md:py-20 relative">
+        <section className="py-12 md:py-20 relative bg-gray-900 text-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-10 md:mb-0">
@@ -24,10 +24,10 @@ export default function AboutPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
-                    Мы делаем благотворительность <span className="text-primary-600">доступной и прозрачной</span>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Мы делаем благотворительность <span className="text-primary-400">доступной и прозрачной</span>
                   </h1>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-8 max-w-lg font-medium">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-lg font-medium">
                     Наша миссия — соединять людей с проверенными благотворительными проектами, которые им действительно близки.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -69,7 +69,7 @@ export default function AboutPage() {
         </section>
         
         {/* Секция Миссия и Видение */}
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <motion.div 
